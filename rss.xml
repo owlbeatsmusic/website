@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Allan Joel Werner</title>
+    <link>https://allanjoelwerner.com/</link>
+    <description>Nya blogginlägg och uppdateringar.</description>
+    <language>se</language>
+    <atom:link href="https://www.allanjoel.com/rss.xml" rel="self" type="application/rss+xml" />
+
+    <!-- Add your latest items here (repeat this block for each item) -->
+    <item>
+      <title>Item Title</title>
+      <link>https://allanjoelwerner.com/blogginlagg/Offline-23-Juli-2023.html</link>
+      <guid>https://allanjoelwerner.com/blogginlagg/Offline-23-Juli-2023.html</guid> <!-- A unique identifier for this item (usually the same as the link) -->
+      <description>Senaste blogginlägget om att gå offline.</description>
+      <pubDate>Mon, 01 Jan 2023 00:00:00 GMT</pubDate> <!-- Publication date of this item -->
+    </item>
+
+    <!-- Add more items here -->
+
+  </channel>
+</rss>
