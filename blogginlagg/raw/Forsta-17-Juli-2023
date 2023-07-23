@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>23 Juli 2023</title>
-  <style>
-    body {
-      font-family: "Consolas", monospace;
-      font-size: 3vmin;
-      width: 800px;
-      margin: 0 auto;
-      }
-      .rainbow-divider {
-      display: flex;
-      height: 2px;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>Offline</h1>
-
-  <b><p>23 Juli 2023<br><a href="../index.html">allanjoelwerner.com</a></p></b>
-  <hr>
+<h1>Offline</h1>
+<b><p>23 Juli 2023<br><a href="../index.html">allanjoelwerner.com</a></p></b>
+<hr>
 
 <p>
 Jag har en ambitiös plan, att gå så offline jag kan. Jag håller på att skaffa en knappmobil för överanvändningen av min iPhone. Det är ingen ny idé, det är många unga idag som är trötta på ett liv som kretsar kring sin mobil. Jag menar alltså att min plan inte är något revolutionerande.
@@ -52,7 +32,3 @@ Avslut
 <p>
 Med allt det sagt kommer jag inte slut se på youtube helt och hållet då jag faktiskt har videor jag verkligen vill se. Jag kommer inte heller sluta spela med mina vänner då och då. Det är inte allt eller inget, jag antar att målet är att drastiskt dra ner på min tid online eller spendera den tiden online bättre. 
 </p>
- <br><br><br>
-</body>
-</html>
-
