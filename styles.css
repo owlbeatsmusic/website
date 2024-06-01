@@ -1,0 +1,35 @@
+html *
+{
+   color: #c800ff !important;
+   font-family: Monospace !important;
+}
+
+body {
+  background-image: url('träd_1.jpg');
+  background-size: cover, content;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("träd_1.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
