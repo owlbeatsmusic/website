@@ -1,30 +1,118 @@
-html *
-{
-   color: #c800ff !important;
-   font-family: Monospace !important;
+ @font-face { font-family: Medium; src: url('fonts/Medium.otf'); } 
+
+.a-home {
+  color: #ffffff;
+  background-color: transparent;
+  text-decoration: none;
 }
+
+
+a:hover {
+    font-family: Medium;
+    color: red;
+    background-color: transparent;
+    background-color: #f3ec78;
+    
+    background: linear-gradient(270deg, #ff0000, #ffa000, #3aff00, #00ffbe, #0076ff, #6000ff, #ff00d4);
+    background-size: 1400% 1400%;
+    -webkit-animation: AnimationName 3s ease infinite;
+    -moz-animation: AnimationName 3s ease infinite;
+    animation: AnimationName 3s ease infinite;
+
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+ }
+
 
 body {
-  background-image: url('träd_1.jpg');
-  background-size: cover, content;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
 }
 
-.bg {
-  /* The image used */
-  background-image: url("träd_1.jpg");
+.document-container {
+    color: #000000;
+    background-color: white;
+    padding: 40px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
 
-  /* Full height */
-  height: 100%; 
+.document-header, .document-footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.document-header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.document-header .author, .document-header .date {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+}
+
+.document-body h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.document-body h3 {
+    margin-top: 20px;
+}
+
+.document-body p {
+    text-align: justify;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.document-footer {
+    font-size: 0.9em;
+    color: #777;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
 }
 
 .column {
   float: left;
-  width: 33.33%;
+  width: 50%;
 }
 
 /* Clear floats after the columns */
