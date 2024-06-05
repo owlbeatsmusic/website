@@ -115,6 +115,13 @@ body {
   width: 50%;
 }
 
+@media (width < 320px) {
+   .column {
+	width: 100%;
+   }
+
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
