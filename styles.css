@@ -43,11 +43,22 @@ a:hover {
 }
 
 .gradient-bg {
-    background-color: #000000;
+    position: relative; /* Required for absolute positioning of the pseudo-element */
+    font-family: 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
     padding: 80px;
     margin: 0;
+    
+}
+.gradient-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
     background: linear-gradient(270deg, #ff0000, #ffa000, #3aff00, #00ffbe, #0076ff, #6000ff, #ff00d4);
     background-size: 1400% 1400%;
     -webkit-animation: AnimationName 20s ease infinite;
@@ -57,6 +68,8 @@ a:hover {
     background-image: url('images/moln_1.jpg'),linear-gradient(270deg, #ff0000, #ffa000, #3aff00, #00ffbe, #0076ff, #6000ff, #ff00d4);
     background-size: cover, 1400% 1400%;
     background-blend-mode: overlay;
+    opacity: 0.3; /* Set the opacity to 50% */
+    z-index: -1; /* Ensure it’s behind the content */
 }
 
 @-webkit-keyframes AnimationName {
@@ -76,16 +89,27 @@ a:hover {
 }
 
 .about-me-bg {
-    color: #ffffff;
+    position: relative; /* Required for absolute positioning of the pseudo-element */
+    color: #000000;
     font-family: 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
     padding: 80px;
     margin: 0;
-    background-image: url('images/piano_1.jpg');
-    background-size: cover, 1400% 1400%;
 }
 
+.about-me-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/piano_1.jpg');
+    background-size: cover;
+    opacity: 0.3; /* Set the opacity to 50% */
+    z-index: -1; /* Ensure it’s behind the content */
+}
 
 .site-header {
     position: fixed;
