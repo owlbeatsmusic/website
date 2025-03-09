@@ -7,7 +7,7 @@
 }
 
 .a-home {
-  color: #ffffff;
+  color: #000000;
   background-color: transparent;
   text-decoration: none;
 }
@@ -58,7 +58,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000000;
+    background-color: #ffffff;
     background: linear-gradient(270deg, #ff0000, #ffa000, #3aff00, #00ffbe, #0076ff, #6000ff, #ff00d4);
     background-size: 1400% 1400%;
     -webkit-animation: AnimationName 20s ease infinite;
@@ -90,7 +90,7 @@ a:hover {
 
 .about-me-bg {
     position: relative; /* Required for absolute positioning of the pseudo-element */
-    color: #000000;
+    color: #ffffff;
     font-family: 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
@@ -116,17 +116,17 @@ a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     padding: 10px;
  }
 
 
 
 .default-body {
-    color: #ffffff;
+    color: #000000;
     font-family: 'Times New Roman', Times, serif;
-    background-color: #000000;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     padding: 80px;
@@ -134,9 +134,9 @@ a:hover {
 }
 
 body {
-    color: #ffffff;
+    color: #000000;
     font-family: 'Times New Roman', Times, serif;
-    background-color: #000000;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -144,7 +144,7 @@ body {
 }
 
 .document-container {
-    color: #000000;
+    color: #ffffff;
     background-color: white;
     padding: 40px;
     border: 1px solid #ccc;
