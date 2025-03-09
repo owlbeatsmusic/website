@@ -1,7 +1,7 @@
  @font-face { font-family: Medium; src: url('fonts/Medium.otf'); } 
 
 .link-desc {
-  color: #454545;
+  color: #8f8f8f;
   background-color: transparent;
   text-decoration: none;
 }
