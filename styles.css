@@ -18,6 +18,12 @@
   text-decoration: underline;
 }
 
+.a-italic {
+  color: #038cfc;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 .a-normal:visited {
   color: #8148FC;
   background-color: transparent;
@@ -194,11 +200,21 @@ body {
 .column {
   float: left;
   width: 50%;
+  max-width: 800px
 }
 
-@media (width < 450px) {
+@media (width < 580px) {
    .column {
 	width: 100%;
+   }
+   .desktop-text {
+        display: none;
+   }
+}
+
+@media (width > 580px) {
+   .mobile-text {
+        display: none;
    }
 
 }
