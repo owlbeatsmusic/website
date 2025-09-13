@@ -7,24 +7,390 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="row">
-  <div class="column">
-	  /skrot-nav
-	</br><p></p>
-  </div>
-  <div class="column">
+
+  <div class="single-column">
 	<center><h1><a class="a-home" href="./index.html">ALLAN JOEL WERNER</a></h1></center>
-	Del av mitt gymnasiearbete. Ett navigationsystem i rymden för en skrotinsamlande farkost.
- 	</br>
+	Del av mitt gymnasiearbete, <u>det som står på denna sida är alltså inte hela hela arbetet då andra delen inte gjordes av mig</u>. Skriven mellan hösten 2024 och våren 2025. En grundläggande mall för ett navigationsystem i rymden för en skrotinsamlande farkost. Jag ber om ursökt för att bilderna är på engelska, jag har förlorat orignalbilderna.
 	</br>
-	Fast det är en lögn, det är egentligen en väldigt grundläggande mall till ett navigationssytem.
+	<p><i>INLÄMNAT 2025-04-11</i></p>
+	<p>För koden se: <a href="https://github.com/owlbeatsmusic/skrot-nav" target="_blank">github</a></p>
+</br>
+	<p> * * * </br></br><i>utdrag ur rapporten:</i></br></p></br>
+
+	<p>
+	<u>Innehållsförteckning</u></br>
+	1. Inledning</br>
+	&emsp; 1.2 Syfte och frågeställning</br>
+	&emsp; 1.4 Bakgrund</br>
+	&emsp; 1.4 Metod (förklaring av kod)</br>
+	2. Undersökning</br>
+	&emsp; 2.1 Programmering</br>
+	3. Avslutning</br>
+	&emsp; 3.1 Slutsats</br>
+	&emsp; 3.2 Diskussion
+	</p>
+
 	</br>
-	</br>
-	<b>SYFTE</b> </br>
-	Genom att programmera ett eget navigationssystem är syftet att få en bättre förståelse om hur delsystemen är uppbyggda och även få insikt i tillgängligheten av resurser inom området. Den allmänna egenskapen av navigationssystemet valdes i syftet att skapa en mall för att öka tillgängligheten av att konstruera ett navigationssystem i rymden för en skrotinsamlande farkost.
-  	</br>
-  	</br>
-	För mer (samt koden) se: <a href="https://github.com/owlbeatsmusic/skrot-nav" target="_blank">github</a>
+	<h2>1. Inledning</h2>
+	<h3>1.2 Syfte och frågeställning</h3>
+	<p>Genom att programmera ett eget navigationssystem är syftet att få en bättre förståelse om hur delsystemen är uppbyggda och även få insikt i tillgängligheten av resurser inom området. Den allmänna egenskapen av navigationssystemet valdes i syftet att skapa en mall för att öka tillgängligheten av att konstruera ett navigationssystem i rymden för en skrotinsamlande farkost.</p>
+	<p>...</p>
+	<p> Hur skulle koden för ett allmänt navigationssystem i rymden för en
+skrotinsamlandefarkost kunna struktureras?</p>
+</br>
+	<h3>1.4 Bakgrund</h3>
+	<h4>1.4.3 Nuläget för skrotinsamling i rymden</h4>
+	<p> I denna punkt kommer olika lösningsmetoder och planer angående rymdskrotinsamling i
+dagsläget att redogöras för. Inledningsvis lyfts ESA:s planer som inkluderar farkosten
+ClearSpace-1 samt ett av NASA:s koncept för en skrotinsamlande farkost. Därefter kommer
+den alternativa lösningen, att ta bort rymdskrot med laser, att presenteras.
+</p>
+<p>
+ESA, den europiska rymdorganisationen, tar i ett dokument angående rymdskrotsbegränsning
+upp hur de riktlinjer som finns är otillräckliga för att förhindra ökningen av rymdskrot (ESA,
+2023). Behovet av framsteg inom området uppmärksammas och i ESA:s ”Agenda 2025”
+stödjs behovet. Genom att arbeta med EU, företag av alla storlekar, uppmuntra bland annat
+utbildning och entreprenörskap inom området. Stödet är i form av samarbete med EU och
+företag, samt att uppmuntra lärare och entreprenörer. (ESA, 2021). I och med detta köpte ESA
+2020 ClearSpace SA som är ett schweiziskt start-up företag. Företaget leder uppdraget
+ClearSpace-1 som har målet att ta ned PROBA-1 satelliten från omloppsbanan. (ESA, u.d.).
+NASA har även presenterat ett koncept för en skrotinsamlande farkost. Farkosten, en ADRV
+(Active Debris Removal Vehicle), fungerar genom att vid närmande av rymdskrot analysera
+dess rörelse, skapa en fångstbana, matcha dess rotationshastighet och sedan fånga objektet
+genom en manöver (NASA, 2021).</p>
+<p>
+En alternativ metod till att samla in rymdskrot med farkost är att skjuta sönder skrotet med
+laser. Denna metod är endast applicerbar för mindre skrot. Den fungerar genom att rikta en
+laser mot objektet antingen från jordens yta eller från rymden, därefter avlägsnas delar av
+skrotets yta och slutligen orsakas en plasmautblåsning. Utsötningen som skapas stör skrotets
+omloppsbana vilket minskar skräpets livslängd. Det finns däremot nackdelar med metoden
+som kravet på precision och uthålliga energinivåer. (Klinkrad, 2006). Ett projekt som
+använder denna teknik är teleskopet Mini-EUSO. Ett av teleskopets uppdrag är att utföra ett
+experiment som innebär att upptäcka ett rymdskrot och sedan skjuta på det med en
+laserkanon. (Rymdstyrelsen, 2019).</p>
+
+</br>
+
+<h3>1.5 Metod</h3>
+<h4>1.5.2 Inledning Programmering</h4>
+<p>Denna del av metoden kommer att i huvudsak innefatta en redovisning och förklaring av
+programmets struktur. Den mest övergripande indelningen av programmet är motorn och
+navigationssystemet. Motorn hanterar simulationen som navigationssystemet befinner sig i
+samt hanterar det visuella användargränssnittet. Navigationssystemet är självaste programmet
+som i praktiken skulle köras på en farkost i rymden.</p>
+
+<p>Inledningsvis kommer programmeringsmiljön att kortfattat beskrivas, därefter motorn och sist
+navigationssystemet. Motorn kan liknas med miljön runt om navigationssystemet och består
+av tre delar. Den första delen är rymdsimulationen som beräknar krafter och uppdaterar
+positioner. Den andra delen är renderaren som hanterar användargränssnittet och därmed
+kopplingen mellan programmet och användaren. Den sista delen är simulationen av
+nedlänken, vilket är kommunikationen ned till jorden. Navigationssystemet delas upp i
+framför allt kärnan som är navigationssystemets utgångspunkt, flygvägsbestämningen som
+skapar vägen för att samla in rymdskrot och sist positionsbestämning vilket behövs för
+skapandet av flygvägar. Navigationssystemet innehåller även en del som hanterar
+kommunikation och en del för interaktion med enheter som exempelvis RADAR.</p>
+
+<center><img src="images/project-overview-diagram.png" alt="överblick av projektstrukturen" style="max-width: 100%; height: auto;"></center>
+<p><i><b>Figur 1.</b> Diagram över den övergripande filstrukturen och interaktionen mellan motor (/src/engine/) och navigationssystem
+(/src/nav/).</i></p>
+
+<p>Navigationssystemet har i huvudsyfte att fungera som en mall för praktiska applikationer
+medan det fortfarande ska vara operativt i simulationen. Delarna ska vara fristående ty
+navigationssystemet ska kunna separeras från motorn och kunna appliceras i praktiken.
+Programmet har även öppen källkod i syfte av användning i praktiken. Öppen källkod innebär
+att koden finns tillgänglig på internet och därmed för allmänheten. Den tvådelade strukturen
+av programmet i form av motor och navigationssystem är därmed basen för hela projektet.</p>
+
+<p>Det finns även en tredje del i den övergripande strukturen som är hjälparfunktioner. Dessa
+funktioner är allmänna vilket innebär att de kan användas i andra funktioner över hela
+programmet och är inte specifika för någon del av programmet. Ett exempel på en
+hjälparfunktion är funktionen: ”vector_normalize()” i filen ”/src/common/vector.c” som
+beräknar normalen av en vektor.</p>
+
+<p>För att påbörja planeringen av motorn och navigationssystemet söktes relevanta källor.
+NASA:s ”Basics of Spaceflight”, en webbsida skriven av Dave Doody (Doody, 2024), ger en
+översiktlig bild av grunderna inom rymdflygning. Sidan diskuterar olika typer av farkoster,
+deras komponenter och hur navigationen går till i rymden. Varav det senare är av störst
+intresse för denna undersökning men även tekniska specifikationer av somliga komponenter
+är av intresse. Den grova uppdelningen av navigationssystemet är att skapa och kontrollera
+flygvägar. För att skapa dessa flygvägar behövs information om farkostens position (Doody,
+2024) och närliggande skrots position.</p>
+
+<h4>1.5.3 Programmeringsmiljö</h4>
+<p>Denna del av metoden kommer att i huvudsak innefatta en redovisning och förklaring av
+programmets struktur. Den mest övergripande indelningen av programmet är motorn och
+navigationssystemet. Motorn hanterar simulationen som navigationssystemet befinner sig i
+samt hanterar det visuella användargränssnittet. Navigationssystemet är självaste programmet
+som i praktiken skulle köras på en farkost i rymden.</p>
+
+<h4>1.5.4 Motor</h4>
+<b><i>1.5.4.1 Rymdsimulationen</i></b>
+</br><code>(src/engine/space.c)</code></br>
+<p>Skapandet av motorn påbörjas innan navigationssystemet. Simulationen av rymden avgränsas
+till det minsta nödvändiga för att navigationssystemet ska fungera. Anledningen till
+avgränsningen är att simulationen inte är det huvudsakliga fokuset av undersökningen och
+eftersom tiden för arbetet är begränsad. Målet med rymdsimulationen är att skapa rymdskrot
+och sedan simulera både skrotet och den skrotinsamlande farkostens bana runt jorden. Kärnan
+i rymdsimulationen är en slinga som primärt uppdaterar alla positioner med Eulers
+Stegmetod. Slingan upprepar ett variabelt antal gånger (steg) med mellanrummet ∆t. För varje
+steg används en funktion för att beräkna gravitationskraften som varje objekt utsätts för vilket
+används för att beräkna accelerationen som därefter används för att beräkna objektets
+hastighet med Eulers Stegmetod genom följande:</p>
+
+<center><img src="images/de-ekvationer.png" alt="ekvation" style="max-width: 100%; height: auto;"></center>
+
+<p>Alla objekts, d.v.s. farkostens och rymdskrotets, initiala positioner sätts slumpmässigt i jorden
+LEO. För att gå i en korrekt bana runt jorden behöver även deras initiala hastigheter sättas till
+omloppshastigheten samt att hastigheternas riktningar behöver vara vinkelräta mot objektens
+positionsvektorer. För varje objekt tas hastigheten fram genom att beräkna storleken på
+hastighetsvektorn med formeln för omloppshastighet och därefter beräkna hastighetsvektorns
+riktning genom att ta kryssprodukten av positionsvektorn med en godtycklig vektor. Sist sätts
+objektets hastighet. Dessa beräkningar representeras i programmet på detta vis:</p>
+
+<pre>
+int r = vector_distance(position, earth_pos);
+float orbital_velocity = sqrt(G * M / r);
+
+Vector3 temp_vector = {0, 0, 1};
+Vector3 velocity_direction = vector_cross_product(position, temp_vector);
+velocity_direction = vector_normalize(velocity_direction);
+
+SpaceObject temp_space_object = {
+    type, (Vector3) {
+        position.x, 
+        position.y, 
+        position.z},
+    (Vector3){
+        velocity_direction.x * orbital_velocity,
+        velocity_direction.y* orbital_velocity,
+        velocity_direction.z* orbital_velocity},
+    mass
+};
+</pre>
+
+</br>
+
+<b><i>1.5.4.2 Renderaren</i></b>
+</br><code>(src/engine/renderer.c)</code></br>
+
+<p>Det grafiska användargränssnittet är inte direkt relevant för frågeställningen, likt
+rymdsimulationen, utan har som mål att snabbt visualisera nödvändig information till
+användaren för att kunna bekräfta navigationssystemets funktion. Renderarens viktigaste
+funktion är att visualisera jordensomloppsbana för att kunna redogöra för positionen av
+rymdskrot och farkost. Denna redogörelse görs genom vyer som visar en tvådimensionell bild
+av två axlar.</p>
+
+<pre>
+View renderer_views[] = {
+	{0, 0, -1, RENDERER_SPACE_WIDTH/2, 'x', 'z'},
+	{1, 0, -1, RENDERER_SPACE_WIDTH,   'x', 'z'},
+	{2, 0, -1, RENDERER_SPACE_WIDTH,   'x', 'y'},
+};
+</pre>
+
+<p>I denna lista av vyer kan ordning de befinner sig i användargränssnittet modifieras med de två
+första argumenten. Skalan på vyn bestäms genom det fjärde argumentet genom att ange
+bredden som vyn ska visa. Det tredje argumentet avgör ifall vyn ska centrera och följa något
+objekt, där -1 är inget objekt. I filen ”main.c” sätts den första vyn till att följa farkosten:</p>
+
+<pre>renderer_views[0].center_object_index = nav_spaceobjects_index;</pre>
+
+<p>Dessa vyer kan skapas och modifieras av användaren genom att anpassa listan samt att sätta
+centrering.</p>
+
+</br>
+
+<b><i>1.5.4.3 Nedlänken</i></b>
+</br><code>(src/engine/downlink.c)</code></br>
+
+<p>Nedlänken är kommunikationen från farkosten upp till jorden. Målet med simulationen av
+nedlänken är att både skicka förfrågningar om information från farkosten, som exempelvis
+den aktiva flygbanan, och att ta emot och svara på förfrågningar från farkosten.</p>
+
+</br>
+
+<h4>1.5.5 Navigationssystemet</h4>
+<p>Navigationssystemet styrs i grunden från kärnan där den centrala processen, alltså slingan,
+befinner sig. I den processen startas navigationssystemet genom att påbörja systemets
+huvudsakliga syfte: skapandet av en flygväg. En flygväg är den bana som
+navigationssystemet planerar för att ta sig till rymdskrot. Skrotet lokaliseras genom
+sammanställning av hämtad och samlad information. Innan rymdvägen skapas behövs
+positionen av farkosten i rymden vilket beräknas med information från nedlänken.</p>
+
+<center><img src="images/navigation-system-diagram.png" alt="överblick av navigationssystemet" style="max-width: 100%; height: auto;"></center>
+<p><i><b>Figur 2.</b> Diagram över den huvudsakliga interaktionen mellan navigationssystemets delar för subsystemet för
+flygvägsbestämnig. Flygväg, objektsdetektering, bästa flygväg och drift från flygväg sker i flight_path.c. Position
+bestämning sker i position.c. Kommunikation sker i communication.c och enheter hanteras i devices.c.</i></p>
+
+<b><i>1.5.5.1 Navigation: Kärnan</i></b>
+</br><code>(src/nav/core.c)</code></br>
+
+<p>Kärnan av programmet hanterar två olika delar som kategoriserar enligt följande: styra
+programmet genom den centrala processen och att koppla samman navigationssystemet med
+simulationen. Detta innebär att kärnan även är startpunkten för systemet. Kärnan hanterar då
+som följd avstängning av systemet samt andra basnivåfunktioner. Systemet och den interna
+klockan startas, och navigationssystemet kopplas samman med simulationen genom följande
+funktion (pseudokod):</p>
+
+<pre>
+nav_core_create() {
+	nav_spaceobjects_index = space_append_spaceobject();
+	start_time = time(NULL);
+	nav_core_proc_main_internal();
+}
+</pre>
+
+</br>
+
+
+<b><i>1.5.5.2 Navigation: Flygväg</i></b>
+</br><code>(src/nav/flight_path.c)</code></br>
+
+<p>Flygvägsdelen av programmet hanterar fyra olika delar som kategoriserar enligt följande:
+skapande av flygväg, lokalisering av rymdskrot, skapandet och utförande manövrar, och drift
+från flygväg. Främst är startpunkten för skapandet av en flygväg samt uppdatering av den
+flygvägen. Skapandet av en flygväg sker i två tre steg. Först avgöra farkostens egen position
+(1.5.4.3) sedan lokalisera närliggande skrot, och sist skapa och utföra nödvändiga manövrar.
+Rymdskrotets position tas reda på genom att skanna farkostens omgivning med de valda
+enheter som exempelvis RADAR och LIDAR.</p>
+
+</br>
+
+<b><i>1.5.5.3 Navigation: Position</i></b>
+</br><code>(src/nav/position.c)</code></br>
+
+<p>Positionsdelen av programmet hanterar tre olika delar som kategoriseras enligt följande:
+utvärdering och förutsägelse av position, kollisionsdetektering, och förfrågning och
+inställning av mätdata. Utvärderingen av farkostens position inleds genom att skicka
+mätdataförfrågningar till nedlänken. När den förfrågade informationen anlänt från nedlänken
+kommer den användas för att beräkna farkostens position.</p>
+
+<p>Här kommer steget från förfrågning till inställning av mätdata att beskrivas. I NASA:s ”Basic
+of Spaceflight” lyfts de tre viktigaste mätdata för bestämning av position i rymden. Dessa tre
+är farkostens avstånd från jorden, radialhastigheten och position på jordens himmel. Denna
+information behöver hämtas från nedlänken och sker genom att först skicka en förfrågan om
+informationen. Förfrågan är ett kommunikationsdatapaket som innehåller variabler för de
+olika mätdata och ett unikt ID samt ett förfrågnings-ID.</p>
+
+<p>Paketet förs till filen ”communication.c” där den sänds vidare till transmittern i ”devices.c”
+.
+Därifrån skickas paketet till nedlänken. I nedlänken skapas ett nytt paket vars förfrågnings-ID
+sätts till förfrågningspaketets ID. Den förfrågade informationen läggs även in i det nya
+paketet. Därefter skickas paket tillbaka till ”communication.c ” i farkosten och uppdaterar
+informationen om den förfrågade mätdata i ”position.c”.</p>
+
+<center><img src="images/request-set-diagram.png" alt="överblick av förfrågan-sättning processen" style="max-width: 100%; height: auto;"></center>
+<p><i><b>Figur 3.</b> Diagram över förfrågning och inställning av mätdata. Informationen hämtas från nedlänken och uppdateras i
+programmets positionsdel (src/nav/position.c)</i></p>
+
+</br>
+
+<b><i>1.5.5.4 Navigation: Kommunikation</i></b>
+</br><code>(src/nav/communication.c)</code></br>
+
+<p>Kommunikationsdelen av programmet hanterar i huvudsak två delar som kategoriserar enligt
+följande: pakethantering och kösystem för förfrågningar. Pakethanteringen består i sin tur av
+fyra funktioner: att skapa paket, skicka paket, ta emot paket och att lagra paket.</p>
+
+<p>Paketen består av informationen som skickas mellan olika delsystem, och mellan farkosten
+och jorden. Det finns två typer av paket: kommunikationspaket och hälsopaket.
+Kommunikationspaketen används för generell kommunikation och är antingen av skickande
+typ, som exempelvis ett svar på en dataförfrågning, eller av mottagande typ som exempelvis
+manuella styrningsinstruktioner från jorden. Hälsopaketet används främst vid kontroller av
+fysiska enheter och innehåller information som temperatur och tryck.</p>
+
+</br>
+
+<h2>2. Undersökning</h2>
+<h3>2.1 Programmering</h3>
+<p>Programmeringsprojektets struktur blev i huvudsak färdig. Ett flertal system som skulle vara
+nödvändiga för användning i praktiken finns ej på plats som exempelvis protokoll för
+uppskjutning och återvändning. Det som finns är en grundläggande mall för de mest centrala
+delsystemen i ett navigationssystem i rymden för en skrotinsamlande farkost. Utifrån
+frågeställningen som lyder hur systemet endast ska struktureras och att syftet med
+programmet är att vara en mall, har inte flertalet delsystem implementerats och simulerats.
+Delsystem som strukturerats men ej implementerats är bland annat simulationer av enheter
+samt en algoritm för flygvägsbestämning.</p>
+
+<p>Till en början var målet att undersöka hur ett allmänt navigationssystem i rymden för en
+skrotinsamlande farkost både skulle struktureras och fungera. Frågeställningen begränsades
+däremot senare till att endast undersöka hur systemet skulle struktureras. Anledningen till
+denna begränsning var den stora skala som projektet antog vid både strukturering och
+implementering av alla delar för att få hela programmet att fungera.</p>
+
+</br>
+
+<h2>3. Avslutning</h2>
+
+<h3>3.1 Slutsats</h3>
+<p>Det är möjligt att skapa ett mycket grundläggande allmänt navigationssystem i rymden för en
+skrotinsamlande farkost. Systemet kan struktureras genom att delas upp i huvudsakligen kärna
+och flygvägsbestämnig. Flygvägsbestämningen delas upp i positionsbestämning,
+objektsdetektering, skapandet av serier av manövrar och koppling till kommunikation och
+enheter.</p>
+
+<h3>3.2 Diskussion</h3>
+
+<h4>3.2.1 Tillgängligheten av ett allmänt navigationssystem för skrotinsamling</h4>
+
+<p>I samband med ökningen av privata uppskjutningar kommer rymdskrotet att öka och för att
+motverka detta behöver rymdskrotet tas ned. En lösning till detta skulle kunna vara att göra
+det mer tillgängligt att skapa och skjuta upp skrotinsamlande farkoster för att motverka
+ökningen. Att skapa denna tillgänglighet består av många steg men en vital del är just
+navigationssystemet. Det är just här ett allmänt navigationssystem för en skrotinsamlande
+farkost blir viktigt och framför allt att det har lättillgänglig öppen källkod.</p>
+
+<p>I skapandet av navigationssystemet för denna undersökning fanns inte mycket kod tillgänglig
+för jämförelse. Denna faktor hade stor påverkan på utformandet av systemet i samband med
+att resurser kring hur ett navigationssystem bör struktureras är gles. Den framföralla källan är
+NASA:s ”Basics of Spaceflight”, fast har ett sådant brett omfång att många detaljer kring just
+uppbyggnaden av programmet i kod och olika subsystem, går bort. Bristen på detaljerad
+information leder till i fallet av denna undersökning, att många egna idéer för strukturering av
+systemet implementeras. Att använda egna implementationer är såklart nödvändigt i alla
+navigationssystem då det inte finns endast ett korrekt sätt att skapa det. Problemet som
+uppstår är däremot att bättre lösningar för navigationssystem, från exempelvis redan skapade
+navigationssystem som då inte har öppen källkod, inte implementeras. Den dåliga
+tillgängligheten är extra problematiskt för just navigationssystem med fokus på
+skrotinsamling eftersom det kan minska bland annat effektiviteten av insamlingen och
+bränsleförbränningen genom att exempelvis ha en bättre algoritm för flygvägar.</p>
+
+<p>I teorin skulle det kunna finnas ett komplext och omfattande allmänt navigationssystem för en
+skrotinsamlande farkost i rymden som enkelt kunde användas i praktiken. Det skulle avlägsna
+en viktig, tidskrävande och möjligen dyr del av att skjuta upp en skrotinsamlande farkost
+privat. Det lätt tillgängliga och omfattande navigationssystemet i samband med ett eventuellt
+bidrag skulle sammanlagt kunna kraftigt öka tillgängligheten för en privat motverkan av
+rymdskrot.</p>
+
+<p>Dock går det att problematisera faktorer kring detta allmänna navigationssystem. Genom att
+skicka upp en ytterligare farkost kan öka det ej spårbara skrotet i form av mikromaterial, E.g.
+bränslepartiklar och färgflisor etc. Det kan även bidra till det spårbara rymdskrotet ifall
+farkosten slutar fungera och klassas som ”Inactive Payloads”. Problemet understryker
+däremot vikten av ett bra allmänt navigationssystem. Mikropartiklar skulle med ett bättre
+navigationssystem kunna minskas genom att optimera flygvägar på bästa sätt. Förbättringen
+av ett allmänt navigationssystem är även med öppenkällkod då många fler kan bidra till
+förbättringar. Genom att använda ett allmänt mer utvecklat system minskar även risken för
+systemfel som kan leda till att farkosten slutar att fungera.</p>
+
+</br>
+
+<h2>4. Källor</h2>
+
+<p>Doody, D. (2024-10-04). Basics of Spaceflight. Hämtat från NASA: https://science.nasa.gov/learn/basics-of-space-flight/</p>
+
+<p>ESA. (den 7 April 2021). Agenda 2025. Hämtat från ESA: https://www.esa.int/About_Us/Introducing_ESA_Agenda_2025</p>
+
+<p>ESA. (den 30 Oktober 2023). ESSB-ST-U-007. Hämtat från ESA: https://sdup.esoc.esa.int/documents/download/ESSB-ST-U-007_Issue_1_30October2023.pdf</p>
+
+<p>ESA. (u.d.). Active debris removal. Hämtat från ESA: https://www.esa.int/Space_Safety/Space_Debris/Active_debris_removal</p>
+
+<p>JPL. (2009-03-03). JPL Institutional Coding Standard for the C Programming Language. Hämtat från: https://yurichev.com/mirrors/C/JPL_Coding_Standard_C.pdf</p>
+
+<p>NASA. (2021). Spacecraft to Remove Orbital Debris. Hämtat från NASA: https://technology.nasa.gov/patent/MSC-TOPS-90</p>
+
+</br>
+</br>
+</br>
+
 </div>
 </body>
 </html>

@@ -203,6 +203,12 @@ body {
   max-width: 800px
 }
 
+.single-column {
+  float: left;
+  width: 50%;
+  max-width: 800px
+}
+
 @media (width < 580px) {
    .column {
 	width: 100%;
@@ -217,6 +223,15 @@ body {
         display: none;
    }
 
+}
+
+@media (width < 800px) {
+   .single-column {
+	width: 100%;
+   }
+   .desktop-text {
+        display: none;
+   }
 }
 
 /* Clear floats after the columns */
