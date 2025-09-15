@@ -243,7 +243,7 @@ body {
 
 .full-width-box {
       width: 100%;
-      border: 2px solid #000000;    /* border around the box */
+      border: 1px solid #000000;    /* border around the box */
       padding: 15px;             /* space inside the box */
       box-sizing: border-box;    /* ensures padding doesn’t shrink width */
     }
